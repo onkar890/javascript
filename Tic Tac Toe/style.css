@@ -1,0 +1,57 @@
+.box{
+    height: 150px;
+    width: 150px;
+    background-color: rgb(233, 158, 20);
+    margin: 5px;
+    cursor: pointer;
+    font-size: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3d0cec;
+}
+
+.rows{
+    display: flex;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    height: 100vh;
+    padding-top: 30px;
+    background-color: royalblue;
+}
+
+.main-container h2{
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.winner{
+    color: white;
+    font-size: 30px;
+    margin-top: 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.reset{
+    background-color: #3d0cec;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font: bold;
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+}
+
+.reset:hover{
+    background-color: #053cf3;
+    color: white;
+}
