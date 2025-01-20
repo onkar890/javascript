@@ -59,3 +59,10 @@ images.forEach((img) => {
     });
 
  
+function reset() {
+    user_score = 0;
+    computer_score = 0;
+    user_score_span.innerHTML = user_score;
+    computer_score_span.innerHTML = computer_score;
+    result.innerHTML = "Let's play!";
+}
