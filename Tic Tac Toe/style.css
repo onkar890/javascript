@@ -1,57 +1,147 @@
-.box{
-    height: 150px;
-    width: 150px;
-    background-color: rgb(233, 158, 20);
-    margin: 5px;
-    cursor: pointer;
-    font-size: 7rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #3d0cec;
+/* Responsive and Modern Styling */
+
+:root {
+    --primary-color: #4CAF50; /* A modern green tone */
+    --secondary-color: #ffffff; /* White for contrast */
+    --accent-color: #ff9800; /* Orange for highlights */
+    --bg-color: #1E1E2F; /* Dark blue-gray background */
+    --text-color: #F0F0F0; /* Light gray text */
+    --box-hover-color: #66BB6A; /* Slightly lighter green for hover */
 }
 
-.rows{
-    display: flex;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    box-sizing: border-box;
 }
-.main-container{
+
+/* Main Container */
+.main-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: flex-start;
     height: 100vh;
-    padding-top: 30px;
-    background-color: royalblue;
+    padding-top: 20px;
+    background-color: var(--bg-color);
 }
 
-.main-container h2{
-    color: white;
-    font-size: 30px;
-    margin-bottom: 20px;
-    font-family: 'Courier New', Courier, monospace;
+/* Header */
+.main-container h2 {
+    color: var(--secondary-color);
+    font-size: 3.5rem;
+    /* margin-bottom: 20px; */
+    margin: 0;
+    text-align: center;
 }
 
-.winner{
-    color: white;
-    font-size: 30px;
-    margin-top: 50px;
-    font-family: 'Courier New', Courier, monospace;
+.main-container h3 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    /* margin-bottom: 20px; */
+    text-align: center;
 }
 
-.reset{
-    background-color: #3d0cec;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    font: bold;
-    font-size: 20px;
-    margin-top: 20px;
-    cursor: pointer;
-    font-family: 'Courier New', Courier, monospace;
+/* Game Boxes */
+.box {
+    height: 120px;
+    width: 120px;
+    background-color: var(--primary-color);
+    margin: 5px;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-color);
     border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
 }
 
-.reset:hover{
-    background-color: #053cf3;
-    color: white;
+.box:hover {
+    background-color: var(--box-hover-color);
+    transform: scale(1.1);
+}
+
+/* Row Style */
+.rows {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 450px;
+}
+
+/* Buttons */
+.mode-btn, .reset {
+    margin: 10px;
+    padding: 12px 20px;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.mode-btn:hover, .reset:hover {
+    background-color: darkorange;
+    transform: scale(1.05);
+}
+
+/* Winner Announcement */
+.winner {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .box {
+        height: 80px;
+        width: 80px;
+        font-size: 2rem;
+    }
+
+    .main-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .winner {
+        font-size: 1.2rem;
+    }
+
+    .mode-btn, .reset {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        height: 60px;
+        width: 60px;
+        font-size: 1.5rem;
+    }
+
+    .main-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .winner {
+        font-size: 1rem;
+    }
+
+    .mode-btn, .reset {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
 }
